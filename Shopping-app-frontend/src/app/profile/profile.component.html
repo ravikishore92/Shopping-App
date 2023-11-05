@@ -1,0 +1,16 @@
+<mat-card appCustomForm>
+
+  <img src="../../assets/empty.png" alt="">
+    <mat-card-header>
+      <mat-card-title>Customer Name : {{cust.name}}</mat-card-title>
+      <mat-card-title>Customer username : {{cust.username}}</mat-card-title>
+      <mat-card-subtitle><B>Contact No :</B> {{cust.contact}}</mat-card-subtitle>
+      <mat-card-subtitle><b>Email :</b> {{cust.email}}</mat-card-subtitle>
+      <mat-card-subtitle><b>Address : </b>{{cust.address}}</mat-card-subtitle>
+      
+    </mat-card-header>
+    <mat-card-actions align="end">
+      <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+    </mat-card-actions>
+    
+  </mat-card>

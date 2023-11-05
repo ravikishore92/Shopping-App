@@ -1,0 +1,69 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .toolbar{
+      background-color: cadetblue;
+      color: white;
+      padding : 10px;
+      position: fixed;
+      width: 100%;
+      z-index : 40;
+      top : 0;
+  }
+  .example-container {
+      position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -90;
+     bottom: 30px;
+    
+    padding-top: 100px;
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    padding-top: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: azure;
+   
+    
+  }
+
+ .side-container{
+   padding-top : 100px;
+   margin-bottom: 50px;
+ }
+  
+  .side-nav {
+    
+    position: fixed;
+    width: 150px;
+    background-color: cadetblue;
+    padding-top: 100px;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .sidelink{
+     padding : 5px 5px;
+     
+  }
+
+  .sidelink:hover{
+      background-color: aquamarine;
+  }
+  
+
+  div > a{
+      text-decoration: none;
+      color: black;
+  }
+
+  mat-toolbar{
+    background-color: aquamarine;
+  }
+ 
+

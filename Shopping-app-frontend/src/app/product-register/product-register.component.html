@@ -1,0 +1,38 @@
+
+
+
+<form action="" onsubmit="" appCustomForm [formGroup]="productForm">
+    <h2>Product registration form</h2><hr>
+   <mat-form-field appearance="fill">
+      <mat-label>Enter Product name</mat-label>
+      <input matInput placeholder="Enter product name" formControlName="name">
+    </mat-form-field>
+   <mat-form-field appearance="fill">
+      <mat-label>Enter Product Features</mat-label>
+      <input matInput placeholder="Enter product features" formControlName="features">
+    </mat-form-field>
+   <mat-form-field appearance="fill">
+      <mat-label>Enter Product Type</mat-label>
+      <input matInput placeholder="Enter product type" formControlName="type">
+    </mat-form-field>
+  
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter product price </mat-label>
+      <input matInput type="number" placeholder ="Enter price " formControlName="price">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter stock count</mat-label>
+      <input matInput type="number" placeholder ="Enter count " formControlName="count">
+    </mat-form-field>
+  
+
+    <br>
+    <button mat-raised-button
+     color="primary" 
+     [disabled]="productForm.invalid"
+     (click)="submit()">Submit</button>
+  </form>
+  
+  

@@ -1,0 +1,36 @@
+
+
+<div appCustomForm style="border:0px">
+    <p>
+     
+         <mat-form-field appearance="outline">
+          <mat-label>Search for products</mat-label>
+          <input
+        matInput placeholder="Search product here" [formControl]="query">
+         
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="searchProducts()">Search</button>
+     
+       
+        
+      </p>
+<ng-container *ngFor="let product of products" >
+
+    
+    
+    <mat-card >
+
+        <mat-card-header>
+          <mat-card-title>{{product.name}}</mat-card-title>
+          <mat-card-subtitle>{{product.features}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions align="end">
+          <button mat-button>{{product.price}}</button>
+          <button mat-raised-button color="primary"  (click)="add(product.id)">Add to Cart</button>
+        </mat-card-actions>
+      </mat-card>
+      <br>
+    
+</ng-container>
+</div>
+

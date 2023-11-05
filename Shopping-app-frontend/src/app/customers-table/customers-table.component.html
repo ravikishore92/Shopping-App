@@ -1,0 +1,50 @@
+
+<div class="customers-table">
+    <button (click)="addCustomer()" mat-raised-button color="primary"><mat-icon>add</mat-icon>Add Customer</button>
+<table mat-table [dataSource]="customers" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Customer Id </th>
+        <td mat-cell *matCellDef="let customer"> {{customer.id}} </td>
+      </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> customer Name </th>
+      <td mat-cell *matCellDef="let customer"> {{customer.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="contact">
+        <th mat-header-cell *matHeaderCellDef> contact </th>
+        <td mat-cell *matCellDef="let customer"> {{customer.contact}} </td>
+      </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let customer"> {{customer.email}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="username">
+      <th mat-header-cell *matHeaderCellDef> username </th>
+      <td mat-cell *matCellDef="let customer"> {{customer.username}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="address">
+      <th mat-header-cell *matHeaderCellDef> address </th>
+      <td mat-cell *matCellDef="let customer"> {{customer.address}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns ;"></tr>
+
+   
+  </table>
+
+</div>

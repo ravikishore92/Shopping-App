@@ -1,0 +1,20 @@
+
+
+<form action="" onsubmit="" appCustomForm [formGroup] ="loginForm" >
+  <h2>Admin Login Form</h2><hr>
+ <mat-form-field appearance="fill">
+    <mat-label>Enter username</mat-label>
+    <input matInput placeholder="Enter username" formControlName="username">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Enter password</mat-label>
+    <input matInput type="password" placeholder ="Enter password" formControlName="password">
+  </mat-form-field>
+  <br>
+  <br>
+  <button mat-raised-button color="primary" [disabled]="loginForm.invalid" (click)="login()">Log in</button>
+</form>
+
+

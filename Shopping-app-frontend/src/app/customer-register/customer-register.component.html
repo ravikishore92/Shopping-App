@@ -1,0 +1,44 @@
+
+
+
+
+<form action="" appCustomForm [formGroup]="customerForm">
+    <h2>Customer Sign up</h2><hr>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter name</mat-label>
+        <input matInput placeholder="Enter name" formControlName="name" >
+      </mat-form-field>
+    
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter usename</mat-label>
+        <input matInput type="text" placeholder ="Enter username" formControlName="username">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter password</mat-label>
+        <input matInput type="password" placeholder ="Enter password" formControlName="password">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter Contact No</mat-label>
+        <input matInput type="text" placeholder ="Enter Contact number" formControlName="contact">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter Email</mat-label>
+        <input matInput type="email" placeholder ="Enter email" formControlName="email">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter address</mat-label>
+        <input matInput type="text" placeholder ="Enter address" formControlName="address">
+      </mat-form-field>
+
+      <br>
+      <button mat-raised-button
+       color="primary" 
+       [disabled]="customerForm.invalid"
+       (click) = "submit()"
+        >Submit</button>
+</form>

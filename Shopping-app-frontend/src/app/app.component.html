@@ -1,0 +1,29 @@
+<div class="toolbar">
+<mat-toolbar>
+  <button mat-icon-button class="example-icon">
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
+  <span><b>Shopping Application</b></span>
+  <span class="example-spacer"></span>
+ 
+</mat-toolbar>
+</div>
+
+<div class="side-nav">
+ 
+  
+ <div class = "sidelink" *ngFor="let nav of (navs$ | async )" [routerLink]="nav.url"> <button mat-button >{{ nav.name }} </button></div>
+   
+ <div class = "sidelink" (click)="logout()" *ngIf="loggedIn"> <button mat-button>logout</button></div>
+   
+    
+
+</div>
+<div class="side-container">
+  <router-outlet></router-outlet>
+</div>
+
+
+
+
+
